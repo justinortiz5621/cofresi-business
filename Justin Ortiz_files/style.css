@@ -8,6 +8,30 @@
   padding: 0;
   box-sizing: border-box;
 }
+/* ============================== */
+/* Mobile scrollable panels fix   */
+/* ============================== */
+
+@media (max-width: 800px) {
+  .body-container,
+  .body,
+  .descriptiona {
+    max-height: 60vh;                /* limit box height */
+    overflow-y: auto;                /* enable vertical scrolling */
+    -webkit-overflow-scrolling: touch; /* smooth scroll on iPhone */
+    padding-right: 15px;             /* prevent text from being cut by scrollbar */
+    box-sizing: border-box;          /* include padding in width */
+    text-align: center;              /* keep text horizontally centered */
+  }
+
+  /* Optional: thin scrollbars for Firefox/WebKit */
+  .body-container::-webkit-scrollbar {
+    width: 6px;
+  }
+  .body-container {
+    scrollbar-width: thin;
+  }
+}
 
 /* Fix content overflow on mobile */
 .body-container, 
