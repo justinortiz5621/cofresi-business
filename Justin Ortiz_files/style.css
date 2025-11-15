@@ -9,6 +9,25 @@
   box-sizing: border-box;
 }
 
+/* Fix content overflow on mobile */
+.body-container, 
+.body, 
+.descriptiona {
+  max-height: none;
+  overflow: visible;
+}
+
+@media (max-width: 800px) {
+  .body-container,
+  .body,
+  .descriptiona {
+    max-height: 60vh;        /* keep within screen */
+    overflow-y: auto;        /* allow scrolling */
+    -webkit-overflow-scrolling: touch;  /* smooth iPhone scrolling */
+    padding-right: 10px;     /* space so text doesn't hit edge */
+  }
+}
+
 body {
   margin: 1.5em;
   font-family: Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roman', 'serif';
