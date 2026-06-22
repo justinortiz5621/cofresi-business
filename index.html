@@ -1,132 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="./Justin Ortiz_files/style.css" rel="stylesheet">
-<script src="./Justin Ortiz_files/scripts.js" defer></script>
-<title>Cofresi Art Handling & Logistics</title> 
-<link rel="shortcut icon" type="image/png" href="favicon.png">
 
+<html><head><link rel='stylesheet' href='style.css'>
 <style>
-/* Tape container */
-#tape-flyer {
-  position: fixed;
-  left: -150px;
-  top: 15vh;
-  width: 100px;
-  height: auto;
-  z-index: 9999;
-  pointer-events: none;
-  opacity: 0.9;
-  animation: flightPath 20s linear infinite;
-  transform-origin: center center;
-  will-change: transform, top, left;
+.btn{
+background:#8b6cf0;
+border:1px solid #8b6cf0;
+color:white;
+padding:16px 34px;
+font-size:22px;
+font-family:inherit;
+text-decoration:none;
+cursor:pointer;
+border-radius:3px;
 }
-
-#tape-flyer img {
-  width: 100%;
-  height: auto;
-  animation: rollSpin 2s linear infinite;
-  transform-origin: center center;
-}
-
-/* Tape flying motion (simplified for mobile performance) */
-@keyframes flightPath {
-  0%   { left: -150px; top: 10vh; transform: rotate(-10deg) scale(1); }
-  50%  { left: 50vw;  top: 25vh; transform: rotate(10deg) scale(1.05); }
-  100% { left: 110vw; top: 10vh; transform: rotate(5deg) scale(0.98); }
-}
-
-/* Tape rolling animation */
-@keyframes rollSpin {
-  from { transform: rotate(0deg); }
-  to   { transform: rotate(360deg); }
-}
-
-/* Accessibility: stop animations if user prefers reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  #tape-flyer { animation: none !important; }
-  #tape-flyer img { animation: none !important; }
-}
-
-/* Mobile adjustments */
-@media (max-width: 800px) {
-  #tape-flyer {
-    width: 60px;   /* smaller tape on phones */
-    top: 10vh;
-  }
+.hero p{
+margin-bottom:28px;
 }
 </style>
-
-</head>
-<body style="background-color:lightsteelblue;">
-
-<br><br><br>
-<center><img src="Logo.jpg" width="350" alt=""/></center>
-<br>
-
-<center>
-<div class="artwork"><span class="title">Info</span> 
-  <div class="body-container">
-    <div class="body">
-      <div class="descriptiona">
-We are a two-person art-handling team based in Los Angeles, providing museum-quality service with speed, care, and efficiency. From installations and deinstallations to packing, transport, and urgent same-day runs, we handle every project with professionalism and attention to detail. Whatever your art needs, we ensure it moves safely and seamlessly.      </div>
-    </div>
-  </div>
-</div>
-</center>
-
-<center>
-<div class="artwork"><span class="title">Services</span> 
-  <div class="body-container">
-    <div class="body">
-      <div class="descriptiona">
-        We provide expert art handling with meticulous attention to every detail, including packing, crating, transport, installation, deinstallation, and condition reporting. Every project is managed with the care, professionalism, and discretion your artwork deserves. Contact us for a tailored quote and secure, seamless service.
-      </div>
-    </div>
-  </div>
-</div>
-</center>
-
-<center>
-<div class="artwork"><span class="title">Contact</span> 
-  <div class="body-container">
-    <div class="body">
-      <div class="descriptiona">
-        info@cofresi.art <br>
-        (224) 633 - 6697 <br>
-        (914) 419 - 4160
-      </div>
-    </div>
-  </div>
-</div>
-</center>
-
-<!-- Tape animation -->
-<div id="tape-flyer" aria-hidden="true">
-  <img src="tape.jpg" alt="">
-</div>
-
-<script>
-(function () {
-  const el = document.getElementById('tape-flyer');
-  if (!el) return;
-
-  // Randomize flight duration a bit
-  const dur = 18 + Math.random() * 6; // 18-24s
-  el.style.animationDuration = dur + 's';
-
-  // Small vertical jitter every few seconds
-  function jitter() {
-    el.style.transform = `translateY(${(Math.random() - 0.5) * 10}px)`;
-    setTimeout(jitter, 3000 + Math.random() * 3000);
-  }
-  setTimeout(jitter, 1000);
-})();
-</script>
-
-	
-	
-</body>
-</html>
+</head><body><nav><img src='Logo.jpg' class='logo'><div class='links'><a href='index.html'>Home</a><a href='services.html'>Services</a><a href='projects.html'>Projects</a><a href='about.html'>About</a><a href='estimate.html'>Estimate</a></div></nav><div id='tape-flyer'><img src='tape.jpg'></div><section class='hero'><div><h1>Museum-Quality Art Handling & Logistics</h1><p>Seamless installation, packing, transportation, crating, and art handling throughout Los Angeles & Southern California.</p><a class='btn' href='estimate.html'>Request Estimate</a></div></section><div class='section'><h2 style="font-size:32px;text-align:center;">Our Clients</h2><p style="font-size:22px;line-height:1.8;text-align:center;">C L E A R I N G • Night Gallery • Estate of David Lynch • Jwan Yosef Studio • L.E.T.R.A. • As It Stands • The Beach • Weinholt Projects • Jarvis Art • Parker Ito Studio</p></div></body></html>

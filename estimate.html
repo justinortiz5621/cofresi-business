@@ -1,0 +1,48 @@
+
+<html>
+<head>
+<link rel='stylesheet' href='style.css'>
+<style>
+.submit-btn{
+    background:transparent;
+    border:1px solid #222;
+    color:#222;
+    padding:12px 28px;
+    font-size:18px;
+    font-family:inherit;
+    cursor:pointer;
+    transition:.25s ease;
+}
+.submit-btn:hover{
+    background:#222;
+    color:white;
+}
+</style>
+</head>
+<body>
+<nav><img src='Logo.jpg' class='logo'><div class='links'><a href='index.html'>Home</a><a href='services.html'>Services</a><a href='projects.html'>Projects</a><a href='about.html'>About</a><a href='estimate.html'>Estimate</a></div></nav>
+<div id='tape-flyer'><img src='tape.jpg'></div>
+<div class='section'>
+<form action='https://formspree.io/f/xvzjolbn' method='POST'>
+<h1>Request Estimate</h1>
+<input type='text' name='first_name' placeholder='First Name' required>
+<input type='text' name='last_name' placeholder='Last Name' required>
+<input type='text' name='organization' placeholder='Organization'>
+<input type='email' name='email' placeholder='Email' required>
+<input type='text' name='phone' placeholder='Phone'>
+<select name='subject'>
+<option>Subject of Request</option>
+<option>Installation</option>
+<option>Deinstallation</option>
+<option>Packing</option>
+<option>Transportation</option>
+<option>Crating</option>
+<option>Storage Coordination</option>
+<option>Shipping</option>
+</select>
+<textarea name='project_details' rows='8' placeholder='Project Details'></textarea>
+<button type='submit' class='submit-btn'>Submit</button>
+</form>
+</div>
+</body>
+</html>
