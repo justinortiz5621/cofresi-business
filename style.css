@@ -1,4 +1,5 @@
-body{margin:0;background:lightsteelblue;font-family:EB Garamond,serif}nav{display:flex;justify-content:space-between;padding:15px 30px;background:rgba(176,196,222,.95)}.logo{height:120px}.links a{font-size: 28px; line-height: 1.5;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+body{margin:0;background:lightsteelblue;font-family: 'Inter', sans-serif}nav{display:flex;justify-content:space-between;padding:15px 30px;background:rgba(176,196,222,.95)}.logo{height:120px}.links a{font-size: 28px; line-height: 1.5;
     font-weight: 500;margin-left:20px;color:black;text-decoration:none}.hero{    min-height:500px;
 ;background:url('IMG_1860.jpg') center/cover;display:flex;align-items:center}.hero div{background:rgba(255,255,255,.85);padding:40px;margin-left:5%;max-width:700px}.btn{background:#a68cf0;color:white;padding:12px 20px;text-decoration:none}.section{max-width:1200px;margin:auto;padding:60px 25px}.grid,.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}.about-section p {
     font-size: 22px !important;
